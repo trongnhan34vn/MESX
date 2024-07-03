@@ -61,11 +61,13 @@ const RealTimeMonitoringDevice = () => {
                           );
                         }));
                     }
+                    return <></>
                   })}
                 </div>
               </div>
             );
           }
+          return <></>
         })}
       </div>
     </div>

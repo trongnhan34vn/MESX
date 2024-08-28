@@ -3,7 +3,7 @@ import { TableProps } from "../../types/Table.type";
 import TableHeader from "./TableHeader";
 import TableBody from "./TableBody";
 
-const Table = <T, K extends keyof T>({ columns, data }: TableProps<T, K>) => {
+const Table = <T extends {type: string, id: number}, K extends keyof T>({ columns, data }: TableProps<T, K>) => {
   return (
     <div className="w-full">
       <table className="table w-full border-[1px] border-[#CAD5E0]">

@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
-import Button from '../components/common/Button';
-import { alerts, devices, reports } from '../constants/realTimeMonitoring';
-import StatusDevice from '../components/common/StatusDevice';
+import Button from '../../components/common/Button';
+import { alerts, devices, reports } from '../../constants/realTimeMonitoring';
+import StatusDevice from '../../components/common/StatusDevice';
 import { useNavigate } from 'react-router-dom';
 
 const RealTimeMonitoring = () => {
@@ -26,7 +26,7 @@ const RealTimeMonitoring = () => {
       <div className={'w-1/5 border-r-[2px] h-full border-[#F6F6F6]'}>
         <div className={'flex items-center justify-between bg-[#E9F7F6] py-2 px-3 mb-10'}>
           <h3 className={'text-sm font-semibold'}>Richy giám sát</h3>
-          <Button title={'Switch'} className={'!py-1 !bg-[#2CADA8] rounded-[500px] text-white'} />
+          <Button type={'button'} title={'Switch'} className={'!py-1 !bg-[#2CADA8] rounded-[500px] text-white'} />
         </div>
         <div className={'flex mb-5 flex-col items-center gap-10 text-sm'}>
           <img className={'w-[114px] h-[114px]'}
@@ -71,7 +71,7 @@ const RealTimeMonitoring = () => {
         <div className={'flex gap-2 mb-8'}>
           {alerts.map((alert, index) => {
             return (
-              <Button onClick={() => handleSelectFilter(alert.id)}
+              <Button type={'button'} onClick={() => handleSelectFilter(alert.id)}
                       className={`text-white !px-6`}
                       style={{
                         backgroundColor: filterSelect.includes(alert.id) ? alert.color : 'transparent',
@@ -107,7 +107,7 @@ const RealTimeMonitoring = () => {
                   </div>
                 </div>
                 <div className={'absolute right-[10px] bottom-[10px] z-10'}>
-                  <Button className={'!py-1 bg-[#ffffff99] border-[1px]'} title={'Details'} />
+                  <Button type={'button'} className={'!py-1 bg-[#ffffff99] border-[1px]'} title={'Details'} />
                 </div>
               </div>
             );

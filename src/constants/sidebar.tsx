@@ -2,7 +2,7 @@ import { LuHome } from "react-icons/lu";
 import { IoBriefcaseOutline } from "react-icons/io5";
 import { RiProductHuntLine } from "react-icons/ri";
 import { CgNotes } from "react-icons/cg";
-import { MenuItem, Submenu } from "../types/Sidebar.type";
+import { MenuItemProps, Submenu } from "../types/Sidebar.type";
 import { TbDeviceHeartMonitorFilled } from 'react-icons/tb';
 
 export const submenus: Submenu[] = [
@@ -11,142 +11,140 @@ export const submenus: Submenu[] = [
     title: "Dashboard",
     activeIcon: <LuHome size={24} color="#fff" />,
     inactiveIcon: <LuHome size={24} color="#5A89C8" />,
+    url: '/app/dashboard'
   },
   {
     id: 2,
     title: "Power Monitoring",
-    activeIcon: <TbDeviceHeartMonitorFilled size={24} color={"#fff"} />
-    ,
+    activeIcon: <TbDeviceHeartMonitorFilled size={24} color={"#fff"} />,
     inactiveIcon: <LuHome size={24} color="#5A89C8" />,
+    url: '/app/power-monitoring'
   },
   {
     id: 3,
-    title: "Thông tin sản xuất",
+    title: "Quản lí thiết bị",
     activeIcon: <IoBriefcaseOutline size={24} color="#fff" />,
     inactiveIcon: <IoBriefcaseOutline size={24} color="#5A89C8" />,
+    url: '/app/device'
   },
   {
     id: 4,
-    title: "Quản lý sản xuất",
+    title: "Quản lý danh mục",
     activeIcon: <RiProductHuntLine size={24} color="#fff" />,
     inactiveIcon: <RiProductHuntLine size={24} color="#5A89C8" />,
+    url: '/app/category'
   },
   {
     id: 5,
     title: "Sản xuất",
     activeIcon: <CgNotes size={24} color="#fff" />,
     inactiveIcon: <CgNotes size={24} color="#5A89C8" />,
+    url: '/app/dashboard'
   },
   {
     id: 6,
     title: "Quản lý thực thi sản xuất",
     activeIcon: <CgNotes size={24} color="#fff" />,
     inactiveIcon: <CgNotes size={24} color="#5A89C8" />,
+    url: '/app/dashboard'
   },
   {
     id: 7,
     title: "Thống kê, báo cáo",
     activeIcon: <CgNotes size={24} color="#fff" />,
     inactiveIcon: <CgNotes size={24} color="#5A89C8" />,
+    url: '/app/dashboard'
   },
   {
     id: 8,
     title: "Hành chính nhân sự",
     activeIcon: <CgNotes size={24} color="#fff" />,
     inactiveIcon: <CgNotes size={24} color="#5A89C8" />,
+    url: '/app/dashboard'
   },
   {
     id: 9,
     title: "Thiết lập",
     activeIcon: <CgNotes size={24} color="#fff" />,
     inactiveIcon: <CgNotes size={24} color="#5A89C8" />,
+    url: '/app/dashboard'
   },
 ];
 
-export const menuItemChildren: MenuItem[] = [
+export const menuItemChildren: MenuItemProps[] = [
   {
     submenu_id: 2,
     title: "Real-time Monitoring",
-    url: "/real-time-monitoring",
+    path: "/real-time-monitoring",
   },
   {
     submenu_id: 3,
-    title: "Quản lý công đoạn SX",
-    url: "/",
-  },
-  {
-    submenu_id: 3,
-    title: "Quản lý quy trình",
-    url: "/",
-  },
-  {
-    submenu_id: 3,
-    title: "Định mức sản phẩm",
-    url: "/",
+    title: "Quản lý thiết bị",
+    path: "",
   },
   {
     submenu_id: 4,
-    title: "Quản lý order",
-    url: "/",
+    title: "Quản lý danh mục",
+    path: "",
   },
   {
     submenu_id: 4,
     title: "Kế hoạch xuất hàng",
-    url: "/",
+    path: "/k",
   },
   {
     submenu_id: 4,
     title: "Kế hoạch sản xuất",
-    url: "/",
+    path: "/k",
   },
   {
     submenu_id: 5,
     title: "Yêu cầu xuất linh kiện/NVL",
-    url: "/",
+    path: "/k",
   },
   {
     submenu_id: 5,
     title: "Yêu cầu nhập kho thành phẩm",
-    url: "/",
+    path: "/k",
   },
   {
     submenu_id: 5,
     title: "Yêu cầu trả linh kiện/NVL",
-    url: "/",
+    path: "/k",
   },
   {
     submenu_id: 7,
     title: "Báo cáo sản xuất hàng ngày",
-    url: "/",
+    path: "/k",
   },
   {
     submenu_id: 7,
     title: "Báo cáo về tiến độ sản xuất",
-    url: "/",
+    path: "/k",
   },
   {
     submenu_id: 7,
     title: "Báo cáo chất lượng",
-    url: "/",
+    path: "/k",
   },
   {
     submenu_id: 7,
     title: "Báo cáo tiêu hao NVL",
-    url: "/",
+    path: "/i",
   },
   {
     submenu_id: 7,
     title: "Báo cáo tiến độ",
-    url: "/",
+    path: "/k",
   },
   {
     submenu_id: 7,
     title: "Báo cáo năng suất",
-    url: "/",
+    path: "/k",
   },
   {
     submenu_id: 9,
     title: "Thiết lập lịch làm việc",
-    url: "/",
+    path: "/k",
   },
 ];

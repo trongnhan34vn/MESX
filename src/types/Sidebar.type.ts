@@ -5,10 +5,11 @@ export type Submenu = {
   activeIcon: ReactNode;
   inactiveIcon: ReactNode;
   title: string;
+  url: string;
 };
 
-export type MenuItem = {
+export type MenuItemProps = {
   submenu_id: number;
   title: string;
-  url: string;
+  path: string;
 };

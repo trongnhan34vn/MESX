@@ -1,3 +1,5 @@
+import { UserSignIn } from './User.type';
+
 export type Alert = {
   id: number,
   status: 'normal' | 'offline' | 'fault' | 'alarm'
@@ -31,4 +33,15 @@ export type Parameter = {
 export type ParameterValue = {
   parameter_id: number,
   value: Map<String, String>
+}
+
+export type AccessTokenType = {
+  tokenAccess: string,
+  userLogin: UserSignIn
+  expires: number
+}
+
+export type LoadingScreenType = {
+  isShow: boolean
+  message: string
 }

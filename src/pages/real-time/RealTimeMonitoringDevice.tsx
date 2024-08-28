@@ -1,8 +1,8 @@
 import React from 'react';
-import Button from '../components/common/Button';
+import Button from '../../components/common/Button';
 import { IoIosArrowBack } from 'react-icons/io';
-import StatusDevice from '../components/common/StatusDevice';
-import { devices, parameters, parameterValues } from '../constants/realTimeMonitoring';
+import StatusDevice from '../../components/common/StatusDevice';
+import { devices, parameters, parameterValues } from '../../constants/realTimeMonitoring';
 import { useNavigate, useParams } from 'react-router-dom';
 
 const RealTimeMonitoringDevice = () => {
@@ -20,6 +20,7 @@ const RealTimeMonitoringDevice = () => {
   return (
     <div className={'px-6 py-4'}>
       <Button
+        type={'button'}
         onClick={() => {
           navigate(-1);
         }}

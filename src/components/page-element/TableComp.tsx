@@ -12,7 +12,7 @@ interface ITableCompProps<T, K extends keyof T> {
   openModal?: () => void;
 }
 
-const TableComp = <T, K extends keyof T>({
+const TableComp = <T extends {type: string, id: number}, K extends keyof T>({
   columns,
   tabData,
   openModal
@@ -48,7 +48,7 @@ const TableComp = <T, K extends keyof T>({
         </TabGroup>
       </div>
       <div className="absolute top-0 right-2">
-          <Button onClick={openModal} title={<GoTasklist size={24} className="w-full" />} />
+          <Button type={'button'} onClick={openModal} title={<GoTasklist size={24} className="w-full" />} />
       </div>
     </div>
   );
